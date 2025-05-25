@@ -58,18 +58,18 @@
                                 AliCare rất hân hạnh được hỗ trợ bạn, hãy để lại thông tin cho chúng tôi nhé. Yêu cầu của bạn sẽ được xử lý trong thời gian sớm nhất.
                             </div>
                         </div>
-                        <form>
+                        <form id="contactForm" onsubmit="return sendEmail(event)">
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Họ và Tên">
+                                <input type="text" class="form-control" name="user_name" placeholder="Họ và Tên" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Số Điện Thoại">
+                                <input type="text" class="form-control" name="user_phone" placeholder="Số Điện Thoại" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="email" class="form-control" name="user_email" placeholder="Email" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Lời Nhắn"></textarea>
+                                <textarea class="form-control" name="message" rows="4" placeholder="Lời Nhắn" required></textarea>
                             </div>
                             <div class="text-end">
                                 <button type="submit" class="btn btn-dark px-4">Gửi ngay</button>
@@ -136,17 +136,103 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // Khởi tạo EmailJS với Public Key mới
+            const config = {
+                publicKey: 'GhGJQEHOfGg_d3sRG',
+                limitRate: true, // Giới hạn số lượng request
+                blockHeadless: true // Chặn các request từ bot
+            };
+            emailjs.init(config);
+        })();
+    </script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ once: true, duration: 800 });</script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        // Xử lý active menu
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy đường dẫn hiện tại
+            const currentPath = window.location.pathname;
+            const currentPage = currentPath.split('/').pop();
+            
+            // Lấy tất cả các menu items
+            const menuItems = document.querySelectorAll('.nav-link');
+            
+            // Xóa class active từ tất cả menu items
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Thêm class active cho menu item tương ứng với trang hiện tại
+            menuItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Code EmailJS
+        (function() {
+            emailjs.init('GhGJQEHOfGg_d3sRG');
+        })();
+    
+        function sendEmail(e) {
+            e.preventDefault();
+    
+            const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Đang gửi...';
+    
+            const templateParams = {
+                to_email: 'info@alicare.io.vn', // Email nhận
+                from_name: form.elements.user_name.value,
+                phone: form.elements.user_phone.value,
+                email: form.elements.user_email.value,
+                message: form.elements.message.value
+            };
+    
+            const submitTime = localStorage.getItem('lastSubmitTime');
+            const now = Date.now();
+            if (submitTime && (now - parseInt(submitTime)) < 60000) {
+                alert('Vui lòng đợi 1 phút trước khi gửi lại.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Gửi ngay';
+                return false;
+            }
+            localStorage.setItem('lastSubmitTime', now.toString());
+    
+            emailjs.send('service_gcq1i7u', 'template_gmplyqg', templateParams) 
+                .then(function(response) {
+                    alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+                    form.reset();
+                }, function(error) {
+                    console.error('Lỗi gửi email:', error);
+                    alert('Có lỗi xảy ra, vui lòng thử lại sau. Chi tiết đã được ghi trong console.');
+                })
+                .finally(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Gửi ngay';
+                });
+    
+            return false;
+        }
+    </script>
 
     <div class="floating-contact">
       <a href="https://zalo.me/yourzalo" target="_blank" class="contact-btn zalo">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq9M6V08Mvxd3OORurB4xNIKudVqwzq0taGQ&s" alt="Zalo" />
       </a>
-      <a href="https://m.me/yourmessenger" target="_blank" class="contact-btn messenger">
+        <a href="https://www.facebook.com/alicare.vn" target="_blank" class="contact-btn messenger">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Messenger" />
       </a>
       
