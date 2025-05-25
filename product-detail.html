@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliCare - Sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        body { font-family: 'Be Vietnam', Arial, sans-serif; background: #f6f8fa; }
+        .breadcrumb { font-size: 1.1rem; margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <!-- Header giống Home -->
+    <header class="bg-white shadow-sm py-2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <div class="logo d-flex align-items-center">
+                    <img src="assets/img/Logo/AliCare_Logo.png" alt="Logo AliCare" style="width:70px;height:70px;background:#fff;border-radius:50%;">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center w-100">
+                        <li class="nav-item"><a class="nav-link" href="Home.html">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About.html">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="product.html">Sản phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Breadcrumb -->
+    <div class="container py-2" data-aos="fade-down">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0" style="font-size:1.15rem;">
+                <li class="breadcrumb-item">
+                    <a style="text-decoration:none;font-weight:700;color:#178acb;" href="Home.html">Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a style="text-decoration:none;font-weight:700;color:#178acb;" href="product.html">Sản phẩm</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-weight:700;color:#178acb;">Tăm chỉ nha khoa 2in1 vị bạc hà</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Chi tiết sản phẩm -->
+    <section class="container my-4" data-aos="fade-up">
+        <div class="row g-4 align-items-start">
+            <div class="col-md-5 d-flex" style="height:340px;">
+                <div class="d-flex flex-column align-items-start gap-4 me-5" style="height:100%;">
+                    <div style="width:90px;height:90px;background:#ccc;border-radius:10px;"></div>
+                    <div style="width:90px;height:90px;background:#ccc;border-radius:10px;"></div>
+                    <div style="width:90px;height:90px;background:#ccc;border-radius:10px;"></div>
+                </div>
+                <div style="flex:1;">
+                    <div style="width:100%;height:100%;background:#ccc;border-radius:8px;border:3px solid #2196f3;"></div>
+                </div>
+            </div>
+            <div  class="col-md-7" style="padding-left: 50px;">
+                <div class="fw-bold" style="color:#2196f3;font-size:2rem;">Tăm chỉ nha khoa 2in1 vị bạc hà</div>
+                <div class="mb-2" style="font-weight:700;font-size:1.15rem;">23,000 VND</div>
+                <div class="mb-3" style="color:#444;font-style:italic;">Tăm chỉ nha khoa 2in1 AliCare là sự kết hợp hoàn hảo giữa chỉ tơ nha khoa và đầu cạo lưỡi, giúp loại bỏ mảng bám và thức ăn thừa trong kẽ răng, đồng thời làm sạch bề mặt lưỡi – nơi tích tụ vi khuẩn gây mùi. Hương bạc hà tươi mát mang lại cảm giác sảng khoái và hơi thở thơm mát sau khi sử dụng.</div>
+                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill" style="font-weight:700;font-size:1.1rem;">MUA NGAY</a>
+            </div>
+        </div>
+    </section>
+    <!-- Tabs mô tả/đánh giá -->
+    <section class="container mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="mt-4 p-0 rounded-4 border overflow-hidden" style="background:#f8fbff;">
+            <div class="d-flex">
+                <button id="tab-desc" class="flex-fill fw-bold py-3 border-0" style="background:#2196f3;color:#fff;font-size:1.2rem;transition:.2s;">MÔ TẢ</button>
+                <button id="tab-review" class="flex-fill fw-bold py-3 border-0" style="background:#e3f6fd;color:#2196f3;font-size:1.2rem;transition:.2s;">ĐÁNH GIÁ</button>
+            </div>
+            <div id="tab-content" class="p-4 bg-white" style="min-height:220px;"></div>
+        </div>
+    </section>
+    <section class="py-4" style="background:transparent;" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+            <div class="p-4 d-flex flex-column flex-md-row align-items-center justify-content-between" style="background:#117ac9;border-radius:20px;">
+                <div class="mb-3 mb-md-0 d-flex flex-column align-items-start">
+                    <div class="text-white" style="font-size:1.5rem;font-weight:700;">Liên hệ với chúng tôi ngay</div>
+                    <div class="text-white" style="font-size:1rem;font-weight:400;">Để được hỗ trợ tư vấn!</div>
+                </div>
+                <a href="#" class="btn btn-outline-light px-4 py-2 rounded-pill ms-md-4" style="font-weight:700;color:#117ac9;background:#fff;border:2px solid #fff;">Nhận tư vấn ngay</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer giống Home -->
+    <!-- Footer mới -->
+    <footer class="footer-section pt-4" style="background:#fff;" data-aos="fade-up" data-aos-delay="300">
+        <div class="container">
+            <div class="row align-items-start pb-2">
+                <!-- Logo và thông tin công ty -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center mb-2">
+                            <img src="assets/img/Logo/AliCare_Horizontal.png" style="width:30%;height:40px;">
+                       
+                    </div>
+                    <div class="fw-bold" style="color:#2196f3;">CÔNG TY TNHH ALICARE</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-map-marker-alt me-2"></i>Xóm 2, Hải Xuân, Hải Hậu, Nam Định</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-phone me-2"></i>0372499187</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-envelope me-2"></i>info@alicare.io.vn</div>
+                    <div class="fw-bold mt-2 mb-1" style="color:#222;">KẾT NỐI VỚI CHÚNG TÔI</div>
+                    <a href="#" target="_blank" style="color:#1877f3;font-size:1.5rem;"><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <!-- Hỗ trợ khách hàng -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="fw-bold" style="font-size:1.2rem;">HỖ TRỢ KHÁCH HÀNG</div>
+                    <div><a href="#" style="color:#222;text-decoration:none;">Chính sách bảo mật</a></div>
+                    <div><a href="#" style="color:#222;text-decoration:none;">Điều khoản sử dụng</a></div>
+                </div>
+            </div>
+            <hr style="margin:0 0 8px 0;opacity:.5;">
+            <div class="text-center small text-muted pb-2">© 2025 All Rights Reserved</div>
+        </div>
+    </footer>
+    <div class="floating-contact">
+      <a href="https://zalo.me/yourzalo" target="_blank" class="contact-btn zalo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq9M6V08Mvxd3OORurB4xNIKudVqwzq0taGQ&s" alt="Zalo" />
+      </a>
+      <a href="https://m.me/yourmessenger" target="_blank" class="contact-btn messenger">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Messenger" />
+      </a>
+      <button id="catbot-btn" class="contact-btn catbot" type="button" style="border:none;background:none;padding:0;">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Catbot" />
+      </button>
+    </div>
+    <div id="catbot-popup">
+      <div id="catbot-header">Catbot <button id="catbot-close" title="Đóng">&times;</button></div>
+      <iframe id="catbot-iframe" src="https://huggingface.co/chat/" allow="microphone;"></iframe>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+    // Dữ liệu mô tả và đánh giá mẫu
+    const productDetail = {
+      name: "Tăm chỉ nha khoa hương bạc hà – Giải pháp chăm sóc răng miệng toàn diện",
+      desc: "Tăm chỉ nha khoa hương bạc hà của AliCare là sự kết hợp hoàn hảo giữa chỉ tơ nha khoa và tăm xỉa răng, giúp làm sạch hiệu quả các mảng bám trong kẽ răng mà bàn chải thông thường khó tiếp cận. Sản phẩm mang đến hương bạc hà tươi mát, giúp hơi thở thơm mát và cảm giác sảng khoái sau khi sử dụng.",
+      highlight: [
+        "Làm sạch mảng bám và thức ăn thừa ở những vị trí khó tiếp cận.",
+        "Ngăn ngừa sâu răng và viêm nướu bằng cách duy trì vệ sinh răng miệng hàng ngày.",
+        "Hương bạc hà tươi mát, mang lại cảm giác dễ chịu sau khi sử dụng.",
+        "Thiết kế tiện lợi, dễ dàng mang theo và sử dụng mọi lúc, mọi nơi."
+      ],
+      info: [
+        "Chất liệu: Nhựa HIPS, sợi chỉ UHMWPE",
+        "Kích thước: 2cm x 3.2cm",
+        "Tiêu chuẩn: TCCS2022",
+        "Số công bố: 220000012/PCBA-TB",
+        "Chứng nhận: ISO 13485:2016"
+      ],
+      guide: [
+        "Dùng đầu chỉ nha khoa để nhẹ nhàng làm sạch kẽ răng, loại bỏ mảng bám và thức ăn thừa.",
+        "Sử dụng đầu tăm để làm sạch các vùng khó tiếp cận hoặc loại bỏ mảng bám cứng đầu.",
+        "Sử dụng phần răng cạo để loại bỏ vi khuẩn trên rêu lưỡi.",
+        "Sử dụng hằng ngày sau khi ăn hoặc theo chỉ dẫn của nha sĩ để duy trì sức khỏe răng miệng tốt nhất."
+      ]
+    };
+    const reviews = [
+      {name:'Hoan123', content:'Sản phẩm tiện lợi.', rating:5, time:'5 ngày trước'},
+      {name:'Minhank201', content:'Tiện lợi, sạch sẽ, dễ mang theo – rất hài lòng!', rating:5, time:'1 tháng trước'},
+      {name:'Khánh Nguyễn', content:'Beautiful recipe. Thank you!', rating:4, time:'1 tuần trước'}
+    ];
+    function setActiveTab(tab) {
+      document.getElementById('tab-desc').style.background = tab==='desc' ? '#2196f3' : '#e3f6fd';
+      document.getElementById('tab-desc').style.color = tab==='desc' ? '#fff' : '#2196f3';
+      document.getElementById('tab-review').style.background = tab==='review' ? '#2196f3' : '#e3f6fd';
+      document.getElementById('tab-review').style.color = tab==='review' ? '#fff' : '#2196f3';
+    }
+    function renderTabContent(tab) {
+      const el = document.getElementById('tab-content');
+      if(tab==='desc') {
+        el.innerHTML = `
+          <div class="mb-3">
+            <div class="fw-bold" style="font-size:1.1rem;">${productDetail.name}</div>
+            <div style="color:#444;">${productDetail.desc}</div>
+          </div>
+          <div class="mb-3">
+            <div class="fw-bold mb-2" style="color:#219653;font-size:1.08rem;"><span style='font-size:1.3em;'>✅</span> Công dụng nổi bật:</div>
+            <ul style="padding-left:1.2em;">
+              ${productDetail.highlight.map(h=>`<li style='margin-bottom:4px;'>${h}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="mb-3">
+            <div class="fw-bold mb-2" style="color:#8d6e63;font-size:1.08rem;"><span style='font-size:1.2em;'>📦</span> Thông số sản phẩm:</div>
+            <ul style="padding-left:1.2em;">
+              ${productDetail.info.map(i=>`<li>${i}</li>`).join('')}
+            </ul>
+          </div>
+          <div>
+            <div class="fw-bold mb-2" style="color:#1565c0;font-size:1.08rem;"><span style='font-size:1.2em;'>🦷</span> Hướng dẫn sử dụng:</div>
+            <ul style="padding-left:1.2em;">
+              ${productDetail.guide.map(g=>`<li>${g}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      } else {
+        el.innerHTML = `
+          <div class="mb-3">
+            <div class="fw-bold mb-2">Nhận xét</div>
+            <form class="bg-light p-3 rounded-3 mb-4">
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-md-3"><input class="form-control" placeholder="Tên"></div>
+                <div class="col-md-3"><input class="form-control" placeholder="Email"></div>
+                <div class="col-md-6"><input class="form-control" placeholder="Viết nhận xét"></div>
+              </div>
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-md-3">Bánh giá
+                  <span style="font-size:1.2em;color:#fbc02d;">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+                <div class="col-md-9 text-end"><button class="btn btn-dark px-4">Post Review</button></div>
+              </div>
+            </form>
+            <div class="fw-bold mb-2">Mô tả</div>
+            <div>
+              ${reviews.map(r=>`
+                <div class='d-flex align-items-center mb-3'>
+                  <div style='width:38px;height:38px;background:#ccc;border-radius:50%;margin-right:12px;'></div>
+                  <div style='flex:1;'>
+                    <div class='fw-bold'>${r.name}</div>
+                    <div class='small text-muted mb-1'>${r.content}</div>
+                    <div class='small text-muted'>${r.time} &nbsp; <span style="color:#fbc02d;">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</span></div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+    }
+    document.getElementById('tab-desc').onclick = function() {
+      setActiveTab('desc');
+      renderTabContent('desc');
+    };
+    document.getElementById('tab-review').onclick = function() {
+      setActiveTab('review');
+      renderTabContent('review');
+    };
+    // Mặc định hiển thị tab mô tả
+    setActiveTab('desc');
+    renderTabContent('desc');
+    // Đảm bảo menu Sản phẩm luôn active
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+        if(link.textContent.trim().toLowerCase() === 'sản phẩm') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+}
+.about-section, .vision-section, .contact-section {
+    border-radius: 10px;
+}
+.card .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    transition: 0.2s;
+}
+.footer-section {
+    background: #f1f6fa;
+    border-radius: 10px 10px 0 0;
+}
+.footer-section .form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: #0d6efd !important;
+}
+@media (max-width: 767.98px) {
+    .about-section .about-img,
+    .mission-section .mission-img,
+    .vision-section .vision-img {
+        min-height: 120px;
+        margin-bottom: 1rem;
+    }
+    .about-section .col-12,
+    .mission-section .col-12,
+    .vision-section .col-12 {
+        margin-bottom: 1rem;
+    }
+    .core-value-section .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive 2-column section */
+.about-section .about-img,
+.mission-section .mission-img,
+.vision-section .vision-img {
+    min-height: 140px;
+    border-radius: 15px;
+    opacity: 0.2;
+}
+
+/* Căn giữa menu text */
+.navbar-nav {
+    justify-content: center !important;
+    align-items: center !important;
+}
+.navbar-nav .nav-link {
+    text-align: center;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+    .navbar-nav .nav-link {
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Offcanvas menu mobile */
+.offcanvas-body .navbar-nav {
+    align-items: center;
+    justify-content: center;
+}
+.offcanvas-body .nav-link {
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+}
+.offcanvas-header {
+    border-bottom: 1px solid #e3f6fd;
+} 

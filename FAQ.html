@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliCare - FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+      body, body * { font-family: 'Be Vietnam', sans-serif !important; }
+      .accordion-button::after { display: none !important; }
+      .faq-arrow {
+        margin-left: auto;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background: url('data:image/svg+xml;utf8,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 6L9 10L13 6" stroke="%231976d2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;
+        transition: transform 0.2s;
+      }
+      .accordion-button:not(.collapsed) .faq-arrow {
+        transform: rotate(180deg);
+      }
+      .faq-accordion .accordion-button {
+        font-weight: 600;
+        color: #155a96;
+        background: #e3f6fd;
+      }
+      .faq-accordion .accordion-item {
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        border: 1.5px solid #b3c6e6;
+      }
+      .faq-accordion .accordion-body {
+        background: #fff;
+        color: #222;
+      }
+      .floating-contact { flex-direction: column !important; align-items: flex-end !important; }
+      .floating-contact .contact-btn { margin: 0 !important; }
+    </style>
+</head>
+<body>
+    <!-- Header giống các trang khác -->
+    <header class="bg-white shadow-sm py-2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <div class="logo d-flex align-items-center">
+                    <img src="assets/img/Logo/AliCare_Logo.png" alt="Logo AliCare" style="width:70px;height:70px;background:#fff;border-radius:50%;">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center w-100">
+                        <li class="nav-item"><a class="nav-link" href="Home.html">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About.html">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="product.html">Sản phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container py-5">
+      <h2 class="fw-bold text-primary mb-4" style="font-size:2rem;">MỘT SỐ CÂU HỎI THƯỜNG GẶP</h2>
+      <div class="mb-3" style="font-size:1.3rem;font-weight:700;color:#1976d2;">Thông tin chung</div>
+      <div class="faq-accordion accordion mb-4" id="faqGeneral">
+        <div class="accordion-item" style="background:#e3f6fd;">
+          <h2 class="accordion-header" id="g1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cg1" aria-expanded="false" aria-controls="cg1">
+              1. Sản phẩm có được cấp giấy chứng nhận chất lượng, an toàn theo tiêu chuẩn y tế không?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cg1" class="accordion-collapse collapse" aria-labelledby="g1" data-bs-parent="#faqGeneral">
+            <div class="accordion-body">Có. Tất cả sản phẩm của công ty đều được cấp giấy chứng nhận chất lượng và an toàn theo tiêu chuẩn y tế trong nước và quốc tế như ISO 13485, CE, FDA (tùy từng sản phẩm). Điều này đảm bảo sản phẩm an toàn, hiệu quả và đủ điều kiện sử dụng trong môi trường y tế chuyên nghiệp.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#fff9c4;">
+          <h2 class="accordion-header" id="g2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cg2" aria-expanded="false" aria-controls="cg2">
+              2. Sản phẩm của công ty có gì khác biệt so với các thương hiệu vật tư y tế khác trên thị trường?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cg2" class="accordion-collapse collapse" aria-labelledby="g2" data-bs-parent="#faqGeneral">
+            <div class="accordion-body">Sản phẩm của công ty có nguồn gốc xuất xứ rõ ràng, được sản xuất tại Việt Nam, và đã được Bộ Y tế cấp phép lưu hành. Ngoài ra, quy trình kiểm định nghiêm ngặt giúp đảm bảo chất lượng ổn định, an toàn tuyệt đối khi sử dụng, khác biệt so với nhiều sản phẩm trôi nổi trên thị trường không rõ nguồn gốc.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#e3f6fd;">
+          <h2 class="accordion-header" id="g3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cg3" aria-expanded="false" aria-controls="cg3">
+              3. Các sản phẩm của công ty phù hợp cho đối tượng nào sử dụng?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cg3" class="accordion-collapse collapse" aria-labelledby="g3" data-bs-parent="#faqGeneral">
+            <div class="accordion-body">Các sản phẩm của Alicare được thiết kế tiện lợi, nhỏ gọn, phù hợp cho nhiều đối tượng sử dụng, đặc biệt là cá nhân và các gia đình có nhu cầu chăm sóc sức khỏe tại nhà. Sản phẩm dễ sử dụng, an toàn, đồng thời vẫn đáp ứng được tiêu chuẩn, phù hợp cả trong môi trường y tế và sinh hoạt hàng ngày.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#fff9c4;">
+          <h2 class="accordion-header" id="g4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cg4" aria-expanded="false" aria-controls="cg4">
+              4. Sản phẩm được đóng gói với khối lượng như thế nào?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cg4" class="accordion-collapse collapse" aria-labelledby="g4" data-bs-parent="#faqGeneral">
+            <div class="accordion-body">Sản phẩm được đóng gói với nhiều quy cách tiện lợi, phù hợp cho việc sử dụng tại nhà hoặc mang theo bên mình.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#e3f6fd;">
+          <h2 class="accordion-header" id="g5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cg5" aria-expanded="false" aria-controls="cg5">
+              5. Tôi có thể mua sản phẩm tại các cửa hàng nào hoặc qua kênh trực tuyến không?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cg5" class="accordion-collapse collapse" aria-labelledby="g5" data-bs-parent="#faqGeneral">
+            <div class="accordion-body">Bạn có thể mua sản phẩm tại các quầy thuốc trên toàn quốc, hoặc đặt mua dễ dàng qua các kênh trực tuyến như Shopee và Facebook chính thức của công ty. Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ giao hàng nhanh chóng nhất.</div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3" style="font-size:1.3rem;font-weight:700;color:#1976d2;">Cách sử dụng</div>
+      <div class="faq-accordion accordion mb-4" id="faqUse">
+        <div class="accordion-item" style="background:#e3f6fd;">
+          <h2 class="accordion-header" id="u1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cu1" aria-expanded="false" aria-controls="cu1">
+              1. Tôi nên bảo quản sản phẩm ở nhiệt độ, độ ẩm như thế nào để giữ chất lượng?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cu1" class="accordion-collapse collapse" aria-labelledby="u1" data-bs-parent="#faqUse">
+            <div class="accordion-body">Bạn nên bảo quản sản phẩm ở nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Nhiệt độ lý tưởng là dưới 30°C, tránh ẩm ướt để đảm bảo chất lượng và hiệu quả sử dụng của sản phẩm, đặc biệt là các vật tư y tế như que thử, găng tay, khẩu trang hay bông gạc.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#fff9c4;">
+          <h2 class="accordion-header" id="u2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cu2" aria-expanded="false" aria-controls="cu2">
+              2. Tôi cần lưu ý điều gì khi sử dụng các sản phẩm của Alicare?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="cu2" class="accordion-collapse collapse" aria-labelledby="u2" data-bs-parent="#faqUse">
+            <div class="accordion-body">
+              Khi sử dụng các sản phẩm vật tư y tế, bạn cần lưu ý:
+              <ul style="margin-top:8px; margin-bottom:0; padding-left:22px;">
+                <li>Đọc kỹ hướng dẫn sử dụng trước khi dùng.</li>
+                <li>Dùng đúng mục đích, đúng cách.</li>
+                <li>Không sử dụng sản phẩm quá hạn hoặc có dấu hiệu hư hỏng, biến dạng.</li>
+                <li>Bảo quản đúng cách, tránh ánh nắng, nơi ẩm ướt.</li>
+                <li>Tránh xa tầm tay trẻ nhỏ để đảm bảo an toàn cho trẻ.</li>
+                <li>Nếu có bất kỳ phản ứng bất thường nào, hãy ngừng sử dụng ngay.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3" style="font-size:1.3rem;font-weight:700;color:#1976d2;">Các thắc mắc khác</div>
+      <div class="faq-accordion accordion" id="faqOther">
+        <div class="accordion-item" style="background:#e3f6fd;">
+          <h2 class="accordion-header" id="o1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#co1" aria-expanded="false" aria-controls="co1">
+              1. Sản phẩm có mùi khó chịu khi sử dụng không?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="co1" class="accordion-collapse collapse" aria-labelledby="o1" data-bs-parent="#faqOther">
+            <div class="accordion-body">Không. Các sản phẩm của công ty không có mùi khó chịu khi sử dụng. Nguyên liệu được chọn lọc kỹ lưỡng, an toàn và không chứa hóa chất gây mùi, đảm bảo trải nghiệm dễ chịu, thân thiện với người dùng, kể cả với những người nhạy cảm.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background:#fff9c4;">
+          <h2 class="accordion-header" id="o2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#co2" aria-expanded="false" aria-controls="co2">
+              2. Sản phẩm có phù hợp với người bị dị ứng với latex?
+              <span class="faq-arrow"></span>
+            </button>
+          </h2>
+          <div id="co2" class="accordion-collapse collapse" aria-labelledby="o2" data-bs-parent="#faqOther">
+            <div class="accordion-body">Sản phẩm của Alicare không chứa latex, phù hợp với hầu hết mọi người. </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer giống các trang khác -->
+    <footer class="footer-section pt-4" style="background:#fff;">
+        <div class="container">
+            <div class="row align-items-start pb-2">
+                <!-- Logo và thông tin công ty -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="assets/img/Logo/AliCare_Horizontal.png" style="width:30%;height:40px;">
+                    </div>
+                    <div class="fw-bold" style="color:#2196f3;">CÔNG TY TNHH ALICARE</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-map-marker-alt me-2"></i>Xóm 2, Hải Xuân, Hải Hậu, Nam Định</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-phone me-2"></i>0372499187</div>
+                    <div class="mb-1" style="color:#222;"><i class="fas fa-envelope me-2"></i>info@alicare.io.vn</div>
+                    <div class="fw-bold mt-2 mb-1" style="color:#222;">KẾT NỐI VỚI CHÚNG TÔI</div>
+                    <a href="#" target="_blank" style="color:#1877f3;font-size:1.5rem;"><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <!-- Hỗ trợ khách hàng -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="fw-bold" style="font-size:1.2rem;">HỖ TRỢ KHÁCH HÀNG</div>
+                    <div><a href="#" style="color:#222;text-decoration:none;">Chính sách bảo mật</a></div>
+                    <div><a href="#" style="color:#222;text-decoration:none;">Điều khoản sử dụng</a></div>
+                </div>
+            </div>
+            <hr style="margin:0 0 8px 0;opacity:.5;">
+            <div class="text-center small text-muted pb-2">© 2025 All Rights Reserved</div>
+        </div>
+    </footer>
+    <div class="floating-contact">
+      <a href="https://zalo.me/yourzalo" target="_blank" class="contact-btn zalo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq9M6V08Mvxd3OORurB4xNIKudVqwzq0taGQ&s" alt="Zalo" />
+      </a>
+      <a href="https://m.me/yourmessenger" target="_blank" class="contact-btn messenger">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Messenger" />
+      </a>
+      <button id="catbot-btn" class="contact-btn catbot" type="button" style="border:none;background:none;padding:0;">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Catbot" />
+      </button>
+    </div>
+    <div id="catbot-popup">
+      <div id="catbot-header">Catbot <button id="catbot-close" title="Đóng">&times;</button></div>
+      <iframe id="catbot-iframe" src="https://huggingface.co/chat/" allow="microphone;"></iframe>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

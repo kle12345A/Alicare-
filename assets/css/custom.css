@@ -1,0 +1,202 @@
+body { font-family: 'Be Vietnam', Arial, sans-serif; opacity:0; transition:opacity 0.7s; }
+body.page-loaded { opacity:1; }
+.aos-init[data-aos] { opacity: 0; }
+.aos-animate[data-aos] { opacity: 1; }
+.navbar-nav .nav-link {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+/* Loading overlay */
+#loading-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+#loading-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader {
+  border: 6px solid #e3f6fd;
+  border-top: 6px solid #2196f3;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.floating-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 80px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.contact-btn img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.contact-btn.zalo { border: 4px solid #25d366; }
+.contact-btn.messenger { border: 4px solid #2196f3; }
+.contact-btn.phone { border: 4px solid #25d366; }
+.contact-btn.chatbot { border: 4px solid #43b97f; background: #e3f6fd; }
+.contact-btn.chatbot img { width: 38px; height: 38px; }
+#chatbot-popup {
+  position: fixed;
+  bottom: 120px;
+  right: 32px;
+  width: 370px;
+  max-width: 95vw;
+  height: 480px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+#chatbot-popup.open { display: flex; }
+#chatbot-header {
+  background: linear-gradient(90deg, #43b97f 0%, #1abc9c 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#chatbot-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#chatbot-body {
+  flex: 1;
+  background: #fafbfc;
+  padding: 18px 14px 0 14px;
+  overflow-y: auto;
+}
+#chatbot-footer {
+  padding: 12px 14px;
+  background: #f3f3f3;
+  display: flex;
+  gap: 8px;
+}
+#chatbot-input {
+  flex: 1;
+  border-radius: 8px;
+  border: 1.5px solid #b3c6e6;
+  padding: 7px 12px;
+  font-size: 1rem;
+}
+#chatbot-send {
+  background: #43b97f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#chatbot-send:hover { background: #1abc9c; }
+#catbot-popup {
+  position: fixed;
+  bottom: 120px;
+  right: 32px;
+  width: 370px;
+  max-width: 95vw;
+  height: 480px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+#catbot-popup.open { display: flex; }
+#catbot-header {
+  background: linear-gradient(90deg, #43b97f 0%, #1abc9c 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#catbot-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#catbot-iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  min-height: 0;
+}
+.contact-btn.catbot {
+  border: 4px solid #ffb300;
+  background: #fffbe7;
+  display: none !important;
+}
+.contact-btn.catbot img {
+  width: 38px;
+  height: 38px;
+}
+/* Dialogflow Messenger custom (optional) */
+df-messenger {
+  --df-messenger-bot-message: #e3f6fd;
+  --df-messenger-button-titlebar-color: #43b97f;
+  --df-messenger-chat-background-color: #fff;
+  --df-messenger-font-color: #222;
+  --df-messenger-send-icon: #43b97f;
+  --df-messenger-user-message: #43b97f;
+  z-index: 99999;
+}
+/* Đổi màu header Poe chatbot */
+iframe[src*="poe.com"] ~ style + div[style*="border-radius:16px"] > div:first-child, 
+iframe[src*="poe.com"]::-webkit-scrollbar-thumb {
+  background: #2196f3 !important;
+} 
