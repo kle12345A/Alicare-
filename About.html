@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+         .fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    }
     @media (max-width: 600px) {
       .rounded-4.p-4 {
         padding: 16px !important;
@@ -21,6 +26,12 @@
         overflow-wrap: break-word;
       }
     }
+    body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#EEEEFF, #87CEFA);
+}
+
     </style>
 </head>
 <body>
@@ -155,15 +166,13 @@
                 <!-- Logo và thông tin công ty -->
                 <div class="col-md-6 mb-3 mb-md-0">
                     <div class="d-flex align-items-center mb-2">
-                            <img src="assets/img/Logo/AliCare_Horizontal.png" style="width:30%;height:40px;">
-                       
+                        <img src="assets/img/Logo/AliCare_Horizontal.png" style="width:30%;height:40px;">
                     </div>
                     <div class="fw-bold" style="color:#2196f3;">CÔNG TY TNHH ALICARE</div>
-                    <div class="mb-1" style="color:#222;"><i class="fas fa-map-marker-alt me-2"></i>Xóm 2, Hải Xuân, Hải Hậu, Nam Định</div>
-                    <div class="mb-1" style="color:#222;"><i class="fas fa-phone me-2"></i>0372499187</div>
-                    <div class="mb-1" style="color:#222;"><i class="fas fa-envelope me-2"></i>info@alicare.io.vn</div>
+                    <div class="mb-1" style="color:#222;"><i class="fa-solid fa-location-dot me-2"></i>Xóm 2, Hải Xuân, Hải Hậu, Nam Định</div>
+                    <div class="mb-1" style="color:#222;"><i class="fa-solid fa-phone me-2"></i>0372499187</div>
+                    <div class="mb-1" style="color:#222;"><i class="fa-solid fa-envelope me-2"></i>info@alicare.io.vn</div>
                     <div class="fw-bold mt-2 mb-1" style="color:#222;">KẾT NỐI VỚI CHÚNG TÔI</div>
-                    <a href="#" target="_blank" style="color:#1877f3;font-size:1.5rem;"><i class="fab fa-facebook-square"></i></a>
                 </div>
                 <!-- Hỗ trợ khách hàng -->
                 <div class="col-md-6 mb-3 mb-md-0">
@@ -180,16 +189,49 @@
       <a href="https://zalo.me/yourzalo" target="_blank" class="contact-btn zalo">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq9M6V08Mvxd3OORurB4xNIKudVqwzq0taGQ&s" alt="Zalo" />
       </a>
-        <a href="https://www.facebook.com/alicare.vn" target="_blank" class="contact-btn messenger">
+      <a href="https://www.facebook.com/alicare.vn" target="_blank" class="contact-btn messenger">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Messenger" />
       </a>
-      <button id="catbot-btn" class="contact-btn catbot" type="button" style="border:none;background:none;padding:0;">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Catbot" />
+      <!-- Chatbot Button -->
+      <button id="chatbot-toggler" class="contact-btn chatbot" type="button">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">close</span>
       </button>
     </div>
-    <div id="catbot-popup">
-      <div id="catbot-header">Catbot <button id="catbot-close" title="Đóng">&times;</button></div>
-      <iframe id="catbot-iframe" src="https://huggingface.co/chat/" allow="microphone;"></iframe>
+    <!-- Chatbot Popup -->
+    <div class="chatbot-popup">
+      <div class="chat-header">
+        <div class="header-info">
+          <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+          </svg>
+          <h2 class="logo-text">AliCare</h2>
+        </div>
+        <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+      </div>
+      <div class="chat-body">
+        <div class="message bot-message">
+          <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+          </svg>
+          <div class="message-text"> Xin chào 👋<br /> Tôi có thể giúp gì cho bạn hôm nay? </div>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <form action="#" class="chat-form">
+          <textarea placeholder="Message..." class="message-input" required></textarea>
+          <div class="chat-controls">
+            <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+            <div class="file-upload-wrapper">
+              <input type="file" id="file-input" hidden />
+              <img src="#" />
+              <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+              <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+            </div>
+            <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -197,5 +239,14 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script>document.addEventListener('DOMContentLoaded', function() { AOS.init({ once: true, duration: 800 }); });</script>
     <script src="assets/js/custom.js"></script>
+    <!-- Google Fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <!-- Emoji Mart -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+    <!-- Chatbot CSS & JS -->
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <script src="assets/js/chatbot.js"></script>
 </body>
 </html>
