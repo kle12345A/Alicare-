@@ -1,0 +1,168 @@
+[
+  {
+    "id": "1",
+    "title": "Tăm chỉ nha khoa 3in1 không vị",
+    "price": "30,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Tăm chỉ nha khoa ko vị(5).png",
+      "assets/img/Sản phẩm chính/Lợi ích.jpg"
+    ],
+    "info": "Mã sản phẩm: TC-01 | Thương hiệu: AliCare",
+    "description": "Tăm chỉ nha khoa 3in1 không vị AliCare là sự kết hợp hoàn hảo giữa chỉ tơ nha khoa và đầu cạo lưỡi, giúp loại bỏ mảng bám và thức ăn thừa trong kẽ răng, đồng thời làm sạch bề mặt lưỡi – nơi tích tụ vi khuẩn gây mùi.",
+    "features": [
+      "Làm sạch mảng bám và thức ăn thừa ở những vị trí khó tiếp cận.",
+      "Ngăn ngừa sâu răng và viêm nướu bằng cách duy trì vệ sinh răng miệng hàng ngày.",
+      "Thiết kế tiện lợi, dễ dàng mang theo và sử dụng mọi lúc, mọi nơi."
+    ],
+    "specs": {
+      "Chất liệu": "Nhựa HIPS, sợi chỉ UHMWPE",
+      "Kích thước": "7cm x 2.3cm",
+      "Tiêu chuẩn": "TCXS20022",
+      "Số công bố": "220000047/PCBA-TB",
+      "Chứng nhận": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng đầu chỉ nha khoa để nhẹ nhàng làm sạch kẽ răng, loại bỏ mảng bám và thức ăn thừa.",
+      "Sử dụng phần đầu cạo lưỡi để loại bỏ vi khuẩn trên bề mặt lưỡi.",
+      "Sử dụng hàng ngày sau khi ăn hoặc theo chỉ dẫn của nha sĩ để duy trì sức khỏe răng miệng tối ưu."
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Tăm chỉ nha khoa 3in1 vị bạc hà",
+    "price": "35,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Tăm chỉ nha khoa vị bạc hà.png",
+      "assets/img/Sản phẩm chính/Lợi ích.jpg"
+    ],
+    "info": "Mã sản phẩm: TC-02 | Thương hiệu: AliCare",
+    "description": "Tăm chỉ nha khoa 3in1 vị bạc hà AliCare giúp làm sạch mảng bám, thức ăn thừa trong kẽ răng, kết hợp hương bạc hà tươi mát, mang lại cảm giác sạch sẽ và hơi thở thơm mát.",
+    "features": [
+      "Làm sạch mảng bám và thức ăn thừa ở những vị trí khó tiếp cận.",
+      "Ngăn ngừa sâu răng và viêm nướu bằng cách duy trì vệ sinh răng miệng hàng ngày.",
+      "Hương bạc hà tươi mát, mang lại cảm giác dễ chịu và hơi thở thơm mát sau khi sử dụng.",
+      "Thiết kế tiện lợi, dễ dàng mang theo và sử dụng mọi lúc, mọi nơi."
+    ],
+    "specs": {
+      "Chất liệu": "Nhựa HIPS, sợi chỉ UHMWPE",
+      "Kích thước": "7cm x 2.3cm",
+      "Tiêu chuẩn": "TCXS20022",
+      "Số công bố": "220000047/PCBA-TB",
+      "Chứng nhận": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng đầu chỉ nha khoa để nhẹ nhàng làm sạch kẽ răng, loại bỏ mảng bám và thức ăn thừa.",
+      "Sử dụng phần đầu cạo lưỡi để loại bỏ vi khuẩn trên bề mặt lưỡi.",
+      "Sử dụng hàng ngày sau khi ăn hoặc theo chỉ dẫn của nha sĩ để duy trì sức khỏe răng miệng tối ưu."
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Tăm chỉ nha khoa vị quế",
+    "price": "35,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Tăm chỉ nha khoa vị quế.png",
+      "assets/img/Sản phẩm chính/Lợi ích.jpg"
+    ],
+    "info": "Mã sản phẩm: TC-03 | Thương hiệu: AliCare",
+    "description": "Tăm chỉ nha khoa vị quế AliCare giúp làm sạch mảng bám, thức ăn thừa trong kẽ răng, kết hợp hương quế thơm dịu, mang lại cảm giác sạch sẽ và hơi thở thơm mát.",
+    "features": [
+      "Làm sạch mảng bám và thức ăn thừa ở những vị trí khó tiếp cận.",
+      "Ngăn ngừa sâu răng và viêm nướu bằng cách duy trì vệ sinh răng miệng hàng ngày.",
+      "Hương quế thơm dịu, mang lại cảm giác dễ chịu và hơi thở thơm mát sau khi sử dụng.",
+      "Thiết kế tiện lợi, dễ dàng mang theo và sử dụng mọi lúc, mọi nơi."
+    ],
+    "specs": {
+      "Chất liệu": "Nhựa HIPS, sợi chỉ UHMWPE",
+      "Kích thước": "7cm x 2.3cm",
+      "Tiêu chuẩn": "TCXS20022",
+      "Số công bố": "220000047/PCBA-TB",
+      "Chứng nhận": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng đầu chỉ nha khoa để nhẹ nhàng làm sạch kẽ răng, loại bỏ mảng bám và thức ăn thừa.",
+      "Sử dụng phần đầu cạo lưỡi để loại bỏ vi khuẩn trên bề mặt lưỡi.",
+      "Sử dụng hàng ngày sau khi ăn hoặc theo chỉ dẫn của nha sĩ để duy trì sức khỏe răng miệng tối ưu."
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Tăm chỉ nha khoa Handyfloss",
+    "price": "65,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Tăm chỉ nha khoa HandyFloss 1.png",
+       "assets/img/Sản phẩm chính/Lợi ích.jpg"
+    ],
+    "info": "Mã sản phẩm: TC-04 | Thương hiệu: AliCare",
+    "description": "Tăm chỉ Handyfloss giúp làm sạch mảng bám, thức ăn thừa trong kẽ răng, thiết kế nhỏ gọn, tiện lợi, dễ sử dụng và mang theo.",
+    "features": [
+      "Làm sạch mảng bám và thức ăn thừa ở những vị trí khó tiếp cận.",
+      "Ngăn ngừa sâu răng và viêm nướu bằng cách duy trì vệ sinh răng miệng hàng ngày.",
+      "Thiết kế nhỏ gọn, tiện lợi, dễ dàng mang theo và sử dụng mọi lúc, mọi nơi."
+    ],
+    "specs": {
+      "Chất liệu": "Nhựa HIPS, sợi chỉ UHMWPE",
+      "Kích thước": "7cm x 2.3cm",
+      "Tiêu chuẩn": "TCXS20022",
+      "Số công bố": "220000047/PCBA-TB",
+      "Chứng nhận": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng đầu chỉ nha khoa để nhẹ nhàng làm sạch kẽ răng, loại bỏ mảng bám và thức ăn thừa.",
+      "Sử dụng hàng ngày sau khi ăn hoặc theo chỉ dẫn của nha sĩ để duy trì sức khỏe răng miệng tối ưu."
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Viên kem đánh răng",
+    "price": "180,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Viên kem đánh răng 1.png",
+      "assets/img/Sản phẩm chính/Viên kem đánh răng 3.png"
+    ],
+    "info": "Mã sản phẩm: KDR-01 | Thương hiệu: AliCare",
+    "description": "Viên kem đánh răng AliCare là lựa chọn hiện đại cho lối sống năng động và bền vững. Thiết kế nhỏ gọn, tiện lợi, giúp kiểm soát liều lượng dễ dàng, không lãng phí.",
+    "features": [
+      "Không chứa paraben, không SLS, an toàn cho người dùng và môi trường.",
+      "Thiết kế nhỏ gọn, dễ mang theo và sử dụng mọi lúc, mọi nơi.",
+      "Giúp làm sạch răng miệng hiệu quả, mang lại hơi thở thơm mát."
+    ],
+    "specs": {
+      "Dạng bào chế": "Viên nén nhai",
+      "Khối lượng tịnh": "0.5g/viên",
+      "Hộp": "90 viên",
+      "Tiêu chuẩn": "TCXS20022",
+      "Chứng nhận": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng 1 viên nhai kỹ trong miệng, sau đó chải răng và làm sạch như bình thường.",
+      "Sử dụng hàng ngày hoặc theo chỉ dẫn của nha sĩ."
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Bàn chải đánh răng tre",
+    "price": "130,000đ",
+    "images": [
+      "assets/img/Sản phẩm chính/Bàn chải.png",
+      "assets/img/Sản phẩm chính/Bàn chải 2 png.png"
+    ],
+    "info": "Mã sản phẩm: BC-01 | Thương hiệu: AliCare",
+    "description": "Bàn chải đánh răng tre AliCare là lựa chọn hoàn hảo cho những ai theo đuổi lối sống bền vững và quan tâm đến sức khỏe răng miệng.",
+    "features": [
+      "Làm sạch nhẹ nhàng, không gây tổn thương nướu.",
+      "Giúp hình thành thói quen sống xanh, hạn chế nhựa dùng một lần.",
+      "Thiết kế tinh tế, dễ cầm nắm, phù hợp với mọi lứa tuổi."
+    ],
+    "specs": {
+      "Chất liệu thân": "Tre tự nhiên ép khối",
+      "Lông bàn chải": "Nylon mềm không chứa BPA",
+      "Màu sắc": "Tự nhiên, không hóa chất độc hại",
+      "Tiêu chuẩn": "ISO 13485:2016"
+    },
+    "usage": [
+      "Dùng cùng kem đánh răng mỗi ngày, chải răng ít nhất 2 lần/ngày.",
+      "Rửa bàn chải sạch sau khi dùng, để nơi khô ráo, thoáng mát."
+    ]
+  }
+]

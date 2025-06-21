@@ -16,54 +16,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-         .fa-solid {
-    font-family: "Font Awesome 6 Free" !important;
+    .fa-solid {
+        font-family: "Font Awesome 6 Free" !important;
     }
-        body { font-family: 'Be Vietnam', Arial, sans-serif; }
-        df-messenger {
-            --df-messenger-button-titlebar-color: #e3f6fd !important;
-            --df-messenger-chat-background-color: #e3f6fd !important;
-            z-index: 100001 !important;
-        }
-        .df-close-btn {
-            position: fixed;
-            bottom: 480px;
-            right: 24px;
-            z-index: 100002;
-            background: #2196f3;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        df-messenger[style*="display: block"] ~ .df-close-btn {
-            display: flex !important;
-        }
-        .floating-contact { flex-direction: column !important; align-items: flex-end !important; }
-        .floating-contact .contact-btn { margin: 0 !important; }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .product-card img {
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover img {
-            transform: scale(1.05);
-        }
-        .product-card .btn {
-            transition: all 0.3s ease;
-        }
-        .product-card:hover .btn {
-            background: #2196f3 !important;
-            transform: translateY(-2px);
-        }
+    body { font-family: 'Be Vietnam', Arial, sans-serif; }
+    /* Đổi màu tiêu đề sản phẩm */
+    .product-card .fw-bold,
+    .product-card .fw-bold a,
+    .product-card .fw-bold span {
+        color: #1E285F !important;
+    }
+    /* Đổi màu giá tiền */
+    .product-card .product-price {
+        color: #1E285F !important;
+        border: 1.5px solid #1E285F !important;
+        border-radius: 10px;
+        font-weight: 600;
+        background: #fff;
+        min-width: 80px;
+        text-align: center;
+        padding: 2px 14px;
+        font-size: 1rem;
+        display: inline-block;
+    }
+    /* Đổi màu button mua ngay */
+    .product-card .btn,
+    .product-card .btn:focus,
+    .product-card .btn:active {
+        background: #1E285F !important;
+        color: #fff !important;
+        border: none !important;
+        font-weight: 700;
+        font-size: 1.05rem;
+        border-radius: 40px;
+        padding: 8px 0;
+        transition: all 0.3s ease;
+    }
+    .product-card .btn:hover {
+        background: #16204a !important;
+        color: #fff !important;
+    }
+    /* Đổi màu background liên hệ */
+    .contact-section-bg,
+    .contact-section-bg .btn-outline-light {
+        background: #1E285F !important;
+        border-color: #1E285F !important;
+    }
+    .contact-section-bg .btn-outline-light {
+        color: #1E285F !important;
+        background: #fff !important;
+    }
+    /* Đổi màu tiêu đề section */
+    .section-title,
+    .mb-3.mt-4[data-aos="fade-right"] {
+        color: #1E285F !important;
+    }
+    .product-card {
+        overflow: hidden;
+        border-width: 1.5px;
+        min-height: 320px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(30,40,95,0.10);
+    }
+    .product-card img {
+        width: 100%;
+        aspect-ratio: 1.1/0.8;
+        background: #ccc;
+        transition: transform 0.3s ease;
+    }
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
     </style>
 </head>
 <body>
@@ -89,108 +119,18 @@
             </div>
         </nav>
     </header>
-    <!-- Banner ảnh lớn đầu trang -->
-    <section class="container my-4">
-        <div class="position-relative" style="border-radius:36px;overflow:hidden;" data-aos="fade-down">
-            <img src="assets/img/banner_about.png" class="w-100" style="height:100%;object-fit:cover;">
-            <div class="position-absolute top-50 start-50 translate-middle w-100 text-center">
-                <span style="font-size:2.8rem;font-weight:800;color:#2560a8;text-shadow:2px 4px 8px #b3c6e6;letter-spacing:2px;">SẢN PHẨM CỦA CHÚNG TÔI</span>
-            </div>
-        </div>
-    </section>
+   
     <!-- Section sản phẩm -->
     <section class="container mb-5" data-aos="fade-up">
-        <div class="mb-3 mt-4" style="font-size:1.25rem;font-weight:700;color:#2560a8;text-transform:uppercase;" data-aos="fade-right">CHĂM SÓC RĂNG MIỆNG</div>
-        <div class="row g-4">
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="100">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>không vị</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">20,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-01 | Thương hiệu: AliCare</div>
-                            <a href="/product-detail.html" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="200">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>vị bạc hà</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">23,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-02 | Thương hiệu: AliCare</div>
-                            <a href="product-detail.html" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="300">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>vị quế</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">23,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-03 | Thương hiệu: AliCare</div>
-                            <a href="product-detail.html" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                </div>
+        <div class="mb-3 mt-4 section-title" style="font-size:1.25rem;font-weight:700;text-transform:uppercase;" data-aos="fade-right">CHĂM SÓC RĂNG MIỆNG</div>
+        <div class="row g-4" id="product-list">
+            <!-- Sản phẩm sẽ được render ở đây -->
+        </div>
     </section>
-     <!-- Section sản phẩm -->
-     <section class="container mb-5" data-aos="fade-up">
-        <div class="mb-3 mt-4" style="font-size:1.25rem;font-weight:700;color:#2560a8;text-transform:uppercase;" data-aos="fade-right">QUE TEST</div>
-        <div class="row g-4">
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="100">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>không vị</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">20,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-01 | Thương hiệu: AliCare</div>
-                            <a href="/product-detail.html" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="200">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>vị bạc hà</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">23,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-02 | Thương hiệu: AliCare</div>
-                            <a href="#" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" data-aos="flip-left" data-aos-delay="300">
-                    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="overflow:hidden;border-width:1.5px;min-height:320px;transition:transform 0.3s ease,box-shadow 0.3s ease;">
-                        <img src="/assets/img/product/image.png" style="width:100%;aspect-ratio:1.1/0.8;background:#ccc;"></img>
-                        <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-                            <div class="d-flex align-items-start justify-content-between mb-1">
-                                <div class="fw-bold" style="color:#2196f3;font-size:1.08rem;line-height:1.2;">Tăm chỉ nha khoa 2in1<br>vị quế</div>
-                                <span style="display:inline-block;padding:2px 14px;border:1.5px solid #2196f3;border-radius:10px;font-weight:600;color:#2196f3;font-size:1rem;background:#fff;min-width:80px;text-align:center;">23,000đ</span>
-                            </div>
-                            <div class="small text-muted mb-2" style="font-size:0.93rem;">Mã sản phẩm: TC-03 | Thương hiệu: AliCare</div>
-                            <a href="#" class="btn w-100 mt-2" style="background:#5cc6f5;color:#fff;font-weight:700;font-size:1.05rem;border-radius:40px;padding:8px 0;">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-    </section>
+   <!-- Contact Section -->
     <section class="py-4" style="background:transparent;" data-aos="zoom-in">
         <div class="container">
-            <div class="p-4 d-flex flex-column flex-md-row align-items-center justify-content-between" style="background:#117ac9;border-radius:20px;">
+            <div class="p-4 d-flex flex-column flex-md-row align-items-center justify-content-between" style="background:#1E285F;border-radius:20px;">
                 <div class="mb-3 mb-md-0 d-flex flex-column align-items-start">
                     <div class="text-white" style="font-size:1.5rem;font-weight:700;">Liên hệ với chúng tôi ngay</div>
                     <div class="text-white" style="font-size:1rem;font-weight:400;">Để được hỗ trợ tư vấn!</div>
@@ -311,5 +251,31 @@
     <!-- Chatbot CSS & JS -->
     <link rel="stylesheet" href="assets/css/chatbot.css" />
     <script src="assets/js/chatbot.js"></script>
+    <script>
+fetch('data/product.json')
+  .then(res => res.json())
+  .then(products => {
+    const list = document.getElementById('product-list');
+    list.innerHTML = products.map(product => `
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center" data-aos="flip-left">
+        <div class="rounded-4 border h-100 d-flex flex-column product-card" style="max-width: 320px; min-width: 240px; width: 100%;">
+          <a href="product-detail.html?id=${product.id}">
+            <img src="${product.images && product.images.length > 0 ? product.images[0] : ''}" alt="${product.title}">
+          </a>
+          <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
+            <div class="d-flex align-items-start justify-content-between mb-1">
+              <a href="product-detail.html?id=${product.id}" style="text-decoration:none;">
+                <div class="fw-bold" style="font-size:1.08rem;line-height:1.2;">${product.title}</div>
+              </a>
+              <span class="product-price" style="font-size:0.92rem; min-width:48px; padding:1px 8px;">${product.price}</span>
+            </div>
+            <div class="small text-muted mb-2" style="font-size:0.93rem;">${product.info}</div>
+            <a href="https://shopee.vn/arlicare" target="_blank" class="btn w-100 mt-2">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  });
+</script>
 </body>
 </html>
