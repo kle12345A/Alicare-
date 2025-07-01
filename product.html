@@ -257,23 +257,23 @@ fetch('data/product.json')
   .then(products => {
     const list = document.getElementById('product-list');
     list.innerHTML = products.map(product => `
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center" data-aos="flip-left">
-        <div class="rounded-4 border h-100 d-flex flex-column product-card" style="max-width: 320px; min-width: 240px; width: 100%;">
-          <a href="product-detail.html?id=${product.id}">
-            <img src="${product.images && product.images.length > 0 ? product.images[0] : ''}" alt="${product.title}">
+  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center" data-aos="flip-left">
+    <div class="rounded-4 border h-100 d-flex flex-column product-card" style="max-width: 320px; min-width: 240px; width: 100%;">
+      <a href="product-detail.html?id=${product.id}">
+        <img src="${product.images && product.images.length > 0 ? product.images[0] : ''}" alt="${product.title}">
+      </a>
+      <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
+        <div class="d-flex align-items-center justify-content-between mb-1" style="gap:10px;">
+          <a href="product-detail.html?id=${product.id}" style="text-decoration:none;flex:1 1 0;min-width:0;">
+            <div class="fw-bold" style="font-size:1.08rem;line-height:1.2;word-break:break-word;">${product.title}</div>
           </a>
-          <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between position-relative" style="min-height:120px;">
-            <div class="d-flex align-items-start justify-content-between mb-1">
-              <a href="product-detail.html?id=${product.id}" style="text-decoration:none;">
-                <div class="fw-bold" style="font-size:1.08rem;line-height:1.2;">${product.title}</div>
-              </a>
-              <span class="product-price" style="font-size:0.92rem; min-width:48px; padding:1px 8px;">${product.price}</span>
-            </div>
-            <div class="small text-muted mb-2" style="font-size:0.93rem;">${product.info}</div>
-            <a href="https://shopee.vn/arlicare" target="_blank" class="btn w-100 mt-2">Mua ngay</a>
-          </div>
+          <span class="product-price flex-shrink-0">${product.price}</span>
         </div>
+        <div class="small text-muted mb-2" style="font-size:0.93rem;">${product.info}</div>
+        <a href="https://shopee.vn/arlicare" target="_blank" class="btn w-100 mt-2">Mua ngay</a>
       </div>
+    </div>
+  </div>
     `).join('');
   });
 </script>
